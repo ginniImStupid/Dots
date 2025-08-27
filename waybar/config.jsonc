@@ -1,0 +1,49 @@
+{
+  "layer": "top",
+  "margin-top": 10,
+  "margin-bottom": 0,
+  "margin-left": 20,
+  "margin-right": 20,
+
+  "position": "top",
+
+  "modules-left": ["clock", "pulseaudio", "network"],
+  "modules-center": ["custom/player"],
+  "modules-right": ["temperature", "battery", "custom/power"],
+
+  "clock": {
+    "format": "{:%a %d %b | %I:%M %p}",
+  },
+
+  "pulseaudio": {
+    "format": "  {volume}%",
+    "format-muted": " Muted",
+  },
+
+  "network": {
+    "format-wifi": "  {signalStrength}%",
+    "format-ethernet": "  Connected",
+    "format-disconnected": "⚠ Disconnected",
+  },
+
+  "temperature": {
+    "critical-threshold": 80,
+    "format": " {temperatureC}°C",
+  },
+
+  "battery": {
+    "format": "{capacity}%",
+  },
+
+  "custom/player": {
+    "exec": "playerctl metadata --format '{{ title }}'",
+    "interval": 2,
+    "return-type": "text",
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": "Shutdown",
+    "on-click": "systemctl poweroff",
+  },
+}

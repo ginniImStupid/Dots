@@ -1,0 +1,53 @@
+* {
+    font-family: JetBrainsMonoNL Nerd Font;
+    font-size: 15px;
+    min-height: 0;
+}
+
+#waybar {
+    background-color: rgba(60, 72, 65, 0.8);
+    color: #a7c080;
+    border-radius: 8px;
+}
+
+/* === Modules === */
+#clock,
+#pulseaudio,
+#network,
+#battery,
+#temperature,
+#custom-player,
+#tray {
+    padding: 0 5px;
+    margin: 0 8px;
+    /*background-color: #1e1e1e;
+    border-radius: 6px;
+    color: #cccccc;*/
+}
+
+#clock,
+#pulseaudio,
+#network,
+#battery,
+#temperature,
+#tray {
+    color: #dbbc7f;
+}
+
+#custom-player {
+    color: #dbbc7f;
+}
+
+/* === Power Button (unchanged) === */
+#custom-power {
+    color: #f38ba8;
+    padding: 0 10px;
+    margin: 0 6px;
+    transition: all 0.2s ease;
+}
+
+#custom-power:hover {
+    background-color: #f38ba8;
+    color: #ffffff;
+    border-radius: 6px;
+}
